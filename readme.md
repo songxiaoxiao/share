@@ -1,7 +1,8 @@
 ### 限流解决方案
 >  Gateway 通过redis + lua 实现 |
 >  Guava RateLimiter 实现   |
->  Sentinel 服务治理限流
+>  Sentinel 服务治理限流 ｜
+>  nginx 扩展ngx_http_limit_req_module模块
 ### 限流的三种算法
 
 ##### 计数器算法

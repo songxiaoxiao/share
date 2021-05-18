@@ -63,14 +63,14 @@ public class CounterLimit {
         }
         int current;
         int next;
-        for (;;){
+        for (;;){ // 自旋锁
             current = requestCount.get();
             if (current > replenishRate){
                 System.out.println("FALSE");
                 return Boolean.FALSE;
             }
             next = current + 1;
-            if (requestCount.compareAndSet(current, next)){
+            if (requestCount.compareAndSet(current, next)){ // cas
                 System.out.println("TRUE");
                 return Boolean.TRUE;
             }

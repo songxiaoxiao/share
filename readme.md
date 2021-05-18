@@ -1,7 +1,7 @@
 ### 限流解决方案
-  Gateway 通过redis + lua 实现
-  Guava RateLimiter 实现
-  Sentinel 服务治理限流
+>  Gateway 通过redis + lua 实现
+>  Guava RateLimiter 实现
+>  Sentinel 服务治理限流
 ### 限流的三种算法
 计数器算法
 一分钟访问次数限制5个。设置一个计数器 每次进来一个请求就+1.当他达到5则对请求进行限制

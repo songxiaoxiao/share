@@ -43,6 +43,8 @@ public class TokenLimit {
         LocalDateTime now = LocalDateTime.now();
         int intoToken = 0;
         if (outTime == null || requestEndTime.isBefore(now)) {
+            // 加入时间计算 每秒钟 累加入令牌桶
+            // 不和leakyBucket中一样直接 outTime = now; 以防止上一秒钟一直在请求导致下一秒和上一秒的计算差值拉不开。
             LocalDateTime last = requestEndTime == null ? now.plusSeconds(-1) : requestEndTime;
             outTime = now;
             requestEndTime = now.plusSeconds(1);

@@ -44,6 +44,7 @@ public class LeakyBucket {
             totalWater -= outWater;
             if (totalWater + 1 <= capacity) {
                 totalWater += 1;
+                System.out.println(totalWater);
                 System.out.println(Boolean.TRUE);
                 return true;
             } else {

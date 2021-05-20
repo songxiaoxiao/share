@@ -17,7 +17,6 @@ public class TestIVThread implements Callable<Boolean> {
     @Override
     public Boolean call() throws Exception {
         System.out.println(name);
-        System.out.println("234");
         return true;
     }
 

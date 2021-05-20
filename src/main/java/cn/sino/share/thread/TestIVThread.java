@@ -17,9 +17,11 @@ public class TestIVThread implements Callable<Boolean> {
     @Override
     public Boolean call() throws Exception {
         System.out.println(name);
+        System.out.println(1);
+        System.out.println(2);
         return true;
     }
-1333
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         TestIVThread thread1 = new TestIVThread("winter");
         TestIVThread thread2 = new TestIVThread("song");
